@@ -4,9 +4,9 @@ namespace frostcheat\actionhouse\commands\subcommands;
 
 use frostcheat\actionhouse\language\LanguageManager;
 use frostcheat\actionhouse\language\TranslationMessages;
-use frostcheat\actionhouse\libs\CortexPE\Commando\args\RawStringArgument;
-use frostcheat\actionhouse\libs\CortexPE\Commando\BaseSubCommand;
-use frostcheat\actionhouse\libs\CortexPE\Commando\exception\ArgumentOrderException;
+use CortexPE\Commando\args\RawStringArgument;
+use CortexPE\Commando\BaseSubCommand;
+use CortexPE\Commando\exception\ArgumentOrderException;
 use frostcheat\actionhouse\Loader;
 use JsonException;
 use pocketmine\command\CommandSender;

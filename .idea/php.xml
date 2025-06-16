@@ -12,6 +12,10 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
+      <path value="$PROJECT_DIR$/../virions/Commando-pm5/src" />
+      <path value="$PROJECT_DIR$/../virions/ConfigUpdater-master/src" />
+      <path value="$PROJECT_DIR$/../virions/InvMenu-pm5/src" />
+      <path value="$PROJECT_DIR$/../virions/UpdateNotifier-master/src" />
       <path value="C:/PocketMine-MP/src" />
       <path value="C:/PocketMine-MP/vendor" />
       <path value="C:/PocketMine-MP/resources" />

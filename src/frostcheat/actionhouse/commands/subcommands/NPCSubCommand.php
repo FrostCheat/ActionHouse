@@ -4,12 +4,11 @@ namespace frostcheat\actionhouse\commands\subcommands;
 
 use frostcheat\actionhouse\language\LanguageManager;
 use frostcheat\actionhouse\language\TranslationMessages;
-use frostcheat\actionhouse\libs\CortexPE\Commando\BaseSubCommand;
-use frostcheat\actionhouse\libs\CortexPE\Commando\constraint\InGameRequiredConstraint;
+use CortexPE\Commando\BaseSubCommand;
+use CortexPE\Commando\constraint\InGameRequiredConstraint;
 use frostcheat\actionhouse\npc\ActionHouseNPC;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
-
 class NPCSubCommand extends BaseSubCommand
 {
 
