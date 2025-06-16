@@ -69,7 +69,6 @@ class Loader extends PluginBase
             return new ActionHouseNPC(EntityDataHelper::parseLocation($nbt, $world), ActionHouseNPC::parseSkinNBT($nbt), $nbt);
         }, ['ActionHouseNPC']);
 
-        $this->getLogger()->info("Plugin has been enabled - author Fr0stCh34t");
         $this->getLogger()->info("Default Language: " . LanguageManager::getInstance()->getLanguage());
         $this->getLogger()->info(count(HouseManager::getInstance()->getItems()) . " items saved");
     }
@@ -84,7 +83,6 @@ class Loader extends PluginBase
 
     protected function onDisable(): void
     {
-        $this->getLogger()->info("Plugin has been disabled - author Fr0stCh34t");
         Provider::getInstance()->saveItems();
     }
 
