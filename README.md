@@ -136,4 +136,4 @@ Any support is greatly appreciated!
 
 ---
 
-<p align="center"><b>Made by FrostCheatMC</b></p>
+<p align="center"><b>Made with 💙 by FrostCheatMC</b></p>
