@@ -12,6 +12,7 @@ use frostcheat\actionhouse\libs\JackMD\UpdateNotifier\UpdateNotifier;
 use frostcheat\actionhouse\libs\muqsit\invmenu\InvMenuHandler;
 use frostcheat\actionhouse\npc\ActionHouseNPC;
 use frostcheat\actionhouse\provider\Provider;
+use frostcheat\actionhouse\utils\Utils;
 use pocketmine\command\Command;
 use pocketmine\entity\EntityDataHelper;
 use pocketmine\entity\EntityFactory;
@@ -53,8 +54,8 @@ class Loader extends PluginBase
         $this->saveResource("language/en-US.yml");
         $this->saveResource("language/es-ES.yml");
         $this->saveResource("language/fr-FR.yml");
-        $this->saveResource("language/pr-IT.yml");
-        $this->saveResource("language/ru-ru.yml");
+        $this->saveResource("language/pr-BR.yml");
+        $this->saveResource("language/ru-RU.yml");
 
         $this->registerCommands([
             new ActionHouseCommand(),
@@ -62,7 +63,7 @@ class Loader extends PluginBase
 
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(function (): void {
             Provider::getInstance()->saveItems();
-        }), 60 * 20);
+        }), Utils::getInstance()->strToTime($this->getConfig()->get("auto-save", "5m")) * 20);
 
         EntityFactory::getInstance()->register(ActionHouseNPC::class, function (World $world, CompoundTag $nbt) : ActionHouseNPC {
             return new ActionHouseNPC(EntityDataHelper::parseLocation($nbt, $world), ActionHouseNPC::parseSkinNBT($nbt), $nbt);

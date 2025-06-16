@@ -9,8 +9,18 @@ language: en-US
 max-price: 1000000000
 min-price: 1
 
+# Available times: 1s, 1m, 1h, 1d, 1w, 1mo, 1y
+# Example: 72h, not Available: 3h 4m
+sell-time: 2d
+
+# Item Autosave Time
+# Use the same format as above
+# I recommend a minimum of 3 minutes (3m) and a maximum of 10 minutes (10m)
+auto-save: 5m
+
 # Maximum number of items for all users
 default-items: 5
+
 # This is the number of items per group that a user can place in the /ah
 # To give that amount to a user you must give the user or their rank permission
 # Example: actionhouse.group.vip

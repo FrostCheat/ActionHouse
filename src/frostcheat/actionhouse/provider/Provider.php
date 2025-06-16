@@ -4,7 +4,7 @@ namespace frostcheat\actionhouse\provider;
 
 use frostcheat\actionhouse\house\HouseManager;
 use frostcheat\actionhouse\Loader;
-use JsonException;
+use frostcheat\actionhouse\provider\task\SaveItemsAsyncTask;
 use pocketmine\utils\Config;
 use pocketmine\utils\SingletonTrait;
 
@@ -25,7 +25,6 @@ class Provider
     }
 
     public function saveItems(): void {
-
         $items = array_map(function ($item) {
             return [
                 "item" => Serialize::serialize($item->getItem()),
@@ -35,11 +34,7 @@ class Provider
             ];
         }, HouseManager::getInstance()->getItems());
 
-        $this->getConfigItems()->setAll($items);
-        try {
-            $this->getConfigItems()->save();
-        } catch (JsonException $e) {
-            Loader::getInstance()->getLogger()->error($e->getMessage());
-        }
+        $file = Loader::getInstance()->getDataFolder() . "items.yml";
+        Loader::getInstance()->getServer()->getAsyncPool()->submitTask(new SaveItemsAsyncTask($file, $items));
     }
 }

@@ -80,7 +80,7 @@ class HouseManager
             ));
         $menu->getInventory()->setItem(49, VanillaItems::GOLD_INGOT()->setCustomName(
             LanguageManager::getInstance()->getTranslation(TranslationMessages::MENU_ITEM_BALANCE, [
-                TranslationKeys::BALANCE => Utils::getInstance()->getBalance($player->getName()),
+                TranslationKeys::BALANCE => Utils::getInstance()->formatBalance(Utils::getInstance()->getBalance($player->getName())),
             ])
         ));
         $menu->getInventory()->setItem(52,
@@ -146,7 +146,7 @@ class HouseManager
         $i = clone $item->getItem();
         $i->setLore(LanguageManager::getInstance()->getTranslation(TranslationMessages::ITEM_LORE, [
             TranslationKeys::SELLER => $item->getPlayer(),
-            TranslationKeys::PRICE => $item->getPrice(),
+            TranslationKeys::PRICE => Utils::getInstance()->formatBalance($item->getPrice()),
             TranslationKeys::EXPIRY_TIME => Utils::getInstance()->formatTimeRemaining($item->getExpiryTime() - time()),
         ]));
 
@@ -176,9 +176,9 @@ class HouseManager
         } else {
             $menu = InvMenu::create(InvMenuTypeIds::TYPE_HOPPER);
             $menu->getInventory()->setContents([
-                0 => VanillaBlocks::REDSTONE()->asItem()->setCustomName(LanguageManager::getInstance()->getTranslation(TranslationMessages::MENU_ITEM_CANCEL_BUY)),
+                0 => VanillaBlocks::REDSTONE()->asItem()->setNamedTag(CompoundTag::create()->setInt("action", 1))->setCustomName(LanguageManager::getInstance()->getTranslation(TranslationMessages::MENU_ITEM_CANCEL_BUY)),
                 2 => $i->getItem(),
-                4 => VanillaBlocks::EMERALD()->asItem()->setCustomName(LanguageManager::getInstance()->getTranslation(TranslationMessages::MENU_ITEM_CONFIRM_BUY)),
+                4 => VanillaBlocks::EMERALD()->asItem()->setNamedTag(CompoundTag::create()->setInt("action", 2))->setCustomName(LanguageManager::getInstance()->getTranslation(TranslationMessages::MENU_ITEM_CONFIRM_BUY)),
             ]);
         }
 
@@ -215,16 +215,16 @@ class HouseManager
                                 if ($p !== null) {
                                     $p->sendMessage(LanguageManager::getInstance()->getPrefix() . LanguageManager::getInstance()->getTranslation(TranslationMessages::PLAYER_SELL_NOTIFICATION, [
                                         TranslationKeys::PLAYER => $player->getName(),
-                                        TranslationKeys::PRICE => $i->getPrice(),
-                                        TranslationKeys::ITEM => "(x" . $i->getItem()->getCount() . ")" . $i->getItem()->getName(),
+                                        TranslationKeys::PRICE => Utils::getInstance()->formatBalance($i->getPrice()),
+                                        TranslationKeys::ITEM => "(x" . $i->getItem()->getCount() . ") " . $i->getItem()->getName(),
                                     ]));
                                 }
                             }
                         });
                         $player->getInventory()->addItem($i->getItem());
                         $player->sendMessage(LanguageManager::getInstance()->getPrefix() . LanguageManager::getInstance()->getTranslation(TranslationMessages::PLAYER_BUY_SUCCESS, [
-                            TranslationKeys::ITEM => "(x" . $i->getItem()->getCount() . ")" . $i->getItem()->getName(),
-                            TranslationKeys::PRICE => $i->getPrice(),
+                            TranslationKeys::ITEM => "(x" . $i->getItem()->getCount() . ") " . $i->getItem()->getName(),
+                            TranslationKeys::PRICE => Utils::getInstance()->formatBalance($i->getPrice()),
                         ]));
                         $this->removeItem($i);
                     } else {

@@ -4,6 +4,7 @@ namespace frostcheat\actionhouse\utils;
 
 use Closure;
 use cooldogedev\BedrockEconomy\api\BedrockEconomyAPI;
+use cooldogedev\BedrockEconomy\BedrockEconomy;
 use cooldogedev\BedrockEconomy\database\cache\GlobalCache;
 use cooldogedev\BedrockEconomy\database\constant\Search;
 use frostcheat\actionhouse\Loader;
@@ -23,6 +24,10 @@ class Utils
     public function getBalance(string $player): int {
         $cacheEntry = GlobalCache::ONLINE()->get($player);
         return $cacheEntry !== null ? $cacheEntry->amount : 0;
+    }
+
+    public function formatBalance(int $amount): string {
+        return BedrockEconomy::getInstance()->getCurrency()->formatter->format($amount, 0);
     }
 
     public function addBalance(string $player, int $amount, Closure $callback): void {
@@ -68,6 +73,29 @@ class Utils
 
         return trim($result);
     }
+
+    public function strToTime(string $input): int {
+        $units = [
+            's' => 1,
+            'm' => 60,
+            'h' => 3600,
+            'd' => 86400,
+            'w' => 604800,
+            'mo' => 2592000,
+            'y' => 31536000
+        ];
+
+        if (preg_match('/^(\d+)(mo|[smhdwy])$/', strtolower($input), $matches)) {
+            $value = (int)$matches[1];
+            $unit = $matches[2];
+
+            if (isset($units[$unit])) {
+                return $value * $units[$unit];
+            }
+        }
+        return 0;
+    }
+
 
     public function getShulkerBoxContents(Item $shulkerItem): array {
         $contents = [];

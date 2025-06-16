@@ -12,6 +12,7 @@ use frostcheat\actionhouse\libs\CortexPE\Commando\BaseSubCommand;
 use frostcheat\actionhouse\libs\CortexPE\Commando\constraint\InGameRequiredConstraint;
 use frostcheat\actionhouse\libs\CortexPE\Commando\exception\ArgumentOrderException;
 use frostcheat\actionhouse\Loader;
+use frostcheat\actionhouse\utils\Utils;
 use pocketmine\command\CommandSender;
 use pocketmine\item\VanillaItems;
 use pocketmine\player\Player;
@@ -61,19 +62,27 @@ class SellSubCommand extends BaseSubCommand
         $price = $args["price"];
         if ($price < $minPrice) {
             $sender->sendMessage(LanguageManager::getInstance()->getPrefix() . LanguageManager::getInstance()->getTranslation(TranslationMessages::COMMAND_SELL_MIN_PRICE_ERROR, [
-                TranslationKeys::PRICE => $minPrice,
+                TranslationKeys::PRICE => Utils::getInstance()->formatBalance($minPrice),
             ]));
             return;
         }
 
         if ($price > $maxPrice) {
             $sender->sendMessage(LanguageManager::getInstance()->getPrefix() . LanguageManager::getInstance()->getTranslation(TranslationMessages::COMMAND_SELL_MAX_PRICE_ERROR, [
-                TranslationKeys::PRICE => $maxPrice,
+                TranslationKeys::PRICE => Utils::getInstance()->formatBalance($maxPrice),
             ]));
             return;
         }
 
-        HouseManager::getInstance()->addItem(new Item(count(HouseManager::getInstance()->getItems()), $item, $sender->getName(), $price, time() + (3 * 24 * 60 * 60)));
+        HouseManager::getInstance()->addItem(new Item(
+            count(HouseManager::getInstance()->getItems()),
+            $item,
+            $sender->getName(),
+            $price,
+            time() + Utils::getInstance()->strToTime(
+                Loader::getInstance()->getConfig()->get("sell-time", "3d"))
+        ));
+
         $sender->getInventory()->setItemInHand(VanillaItems::AIR());
         foreach (Loader::getInstance()->getServer()->getOnlinePlayers() as $player) {
             $player->sendPopup(LanguageManager::getInstance()->getTranslation(TranslationMessages::PLAYER_SELL_POPUP, [
@@ -82,7 +91,7 @@ class SellSubCommand extends BaseSubCommand
             ]));
         }
         $sender->sendMessage(LanguageManager::getInstance()->getPrefix() . LanguageManager::getInstance()->getTranslation(TranslationMessages::COMMAND_SELL_SUCCESS, [
-            TranslationKeys::PRICE => $price,
+            TranslationKeys::PRICE => Utils::getInstance()->formatBalance($price),
             TranslationKeys::ITEM => "(x" . $item->getCount() . ") " . $item->getName(),
         ]));
     }
