@@ -1,0 +1,43 @@
+prefix: "&bCasaDeSubastas &7- &r"
+
+item.lore:
+  - "&7▴ &fVENDEDOR&8: &b{seller}"
+  - "&7✯ &fPRECIO&8: &c{price}$"
+  - "&7⏺ &fEXPIRA&8: &e{expiry_time}"
+  - ""
+  - "&9&o- HAZ CLIC PARA COMPRAR ESTE ARTÍCULO"
+
+npc.name: "&l&a¡NUEVO!\n&r&l&4Casa de Subastas\n&7/ah"
+npc.scoreTag: "&8Haz clic para abrir"
+npc.spawn: "&aHas generado exitosamente el NPC, para eliminarlo pégale con un bloque de bedrock"
+
+menu.item.yourItems: "&aTus Artículos"
+menu.item.previousPage: "&cPágina Anterior"
+menu.item.nextPage: "&aPágina Siguiente"
+menu.item.back: "&cAtrás"
+menu.item.confirmBuy: "&aConfirmar Compra"
+menu.item.cancelBuy: "&cCancelar Compra"
+menu.item.balance: "&fSaldo: &e${balance}"
+
+menu.title: "&eA&fH &7- &fPágina: &e{current_page}"
+menu.confirmTitle: "&aMenú de Confirmación"
+menu.yourItemsTitle: "&eTus &fArtículos &7- &fPágina: &e{current_page}"
+
+player.noItemInHand: "&cDebes tener un artículo en la mano para venderlo"
+player.insufficientFunds: "&cNo tienes fondos suficientes para comprar este artículo"
+player.sellPopup: "&fEl jugador &e{player} &facaba de poner en venta &e{item} &fen &e/ah"
+player.buySuccess: "&aHas comprado &e{item} &aexitosamente por &e${price}"
+player.sellNotification: "&fEl jugador &e{player} &fcompró tu &e{item} &fpor &e${price}"
+player.inventoryFull: "&cTu inventario está lleno para comprar este artículo"
+player.maxItems: "&cHas alcanzado el límite de artículos ({max_items})"
+
+command.help: "&b/ah ayuda"
+command.noPlayer: "&cDebes ser un jugador para usar este comando"
+command.noPermission: "&cNo tienes permiso para usar este comando"
+
+command.sell.success: "&fAcabas de poner en venta &e{item} &fpor &e${price}"
+command.sell.minPriceError: "&cEl precio debe ser mayor o igual a ${price}"
+command.sell.maxPriceError: "&cEl precio debe ser menor o igual a ${price}"
+
+command.setlanguage.error: "&cEse lenguaje no esta permitido usa: en-US, es-ES, fr-FR, pr-BR, ru-RU, de-DE"
+command.setlanguage.success: "&aEl lenguaje se ha cambiado perfectamente"

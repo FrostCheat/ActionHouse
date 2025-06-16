@@ -1,0 +1,43 @@
+prefix: "&bMaisonDesEnchères &7- &r"
+
+item.lore:
+  - "&7▴ &fVENDEUR&8: &b{seller}"
+  - "&7✯ &fPRIX&8: &c{price}$"
+  - "&7⏺ &fEXPIRE&8: &e{expiry_time}"
+  - ""
+  - "&9&o- CLIQUEZ POUR ACHETER CET ARTICLE"
+
+npc.name: "&l&aNOUVEAU!\n&r&l&4Maison des Enchères\n&7/ah"
+npc.scoreTag: "&8Cliquez pour ouvrir"
+npc.spawn: "&aVous avez fait apparaître le PNJ avec succès, frappez-le avec un bloc de bedrock pour le supprimer"
+
+menu.item.yourItems: "&aVos Articles"
+menu.item.previousPage: "&cPage Précédente"
+menu.item.nextPage: "&aPage Suivante"
+menu.item.back: "&cRetour"
+menu.item.confirmBuy: "&aConfirmer l'Achat"
+menu.item.cancelBuy: "&cAnnuler l'Achat"
+menu.item.balance: "&fSolde: &e${balance}"
+
+menu.title: "&eA&fH &7- &fPage: &e{current_page}"
+menu.confirmTitle: "&aMenu de Confirmation"
+menu.yourItemsTitle: "&eVos &fArticles &7- &fPage: &e{current_page}"
+
+player.noItemInHand: "&cVous devez avoir un objet en main pour le vendre"
+player.insufficientFunds: "&cVous n'avez pas assez de fonds pour acheter cet article"
+player.sellPopup: "&fLe joueur &e{player} &fvient de mettre en vente &e{item} &fsur &e/ah"
+player.buySuccess: "&aVous avez acheté &e{item} &apour &e${price}"
+player.sellNotification: "&fLe joueur &e{player} &fa acheté votre &e{item} &fpour &e${price}"
+player.inventoryFull: "&cVotre inventaire est plein pour acheter cet article"
+player.maxItems: "&cVous avez atteint la limite d'articles ({max_items})"
+
+command.help: "&b/ah aide"
+command.noPlayer: "&cVous devez être un joueur pour utiliser cette commande"
+command.noPermission: "&cVous n'avez pas la permission d'utiliser cette commande"
+
+command.sell.success: "&fVous avez mis en vente &e{item} &fpour &e${price}"
+command.sell.minPriceError: "&cLe prix doit être supérieur ou égal à ${price}"
+command.sell.maxPriceError: "&cLe prix doit être inférieur ou égal à ${price}"
+
+command.setlanguage.error: "&cCette langue n'est pas autorisée. Utilisez : en-US, es-ES, fr-FR, pr-BR, ru-RU, de-DE"
+command.setlanguage.success: "&aLa langue a été changée avec succès"

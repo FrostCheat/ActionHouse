@@ -1,0 +1,43 @@
+prefix: "&bActionHouse &7- &r"
+
+item.lore:
+  - "&7▴ &fSELLER&8: &b{seller}"
+  - "&7✯ &fPRICE&8: &c{price}$"
+  - "&7⏺ &fEXPIRE&8: &e{expiry_time}"
+  - ""
+  - "&9&o- CLICK TO BUY THIS ITEM"
+
+npc.name: "&l&aNEW!\n&r&l&4Action House\n&7/ah"
+npc.scoreTag: "&8Click to open"
+npc.spawn: "&aYou have successfully spawned the NPC, to remove it hit it with a bedrock block"
+
+menu.item.yourItems: "&aYour Items"
+menu.item.previousPage: "&cPrevious Page"
+menu.item.nextPage: "&aNext Page"
+menu.item.back: "&cBack"
+menu.item.confirmBuy: "&aConfirm Buy"
+menu.item.cancelBuy: "&cCancel Buy"
+menu.item.balance: "&fBalance: &e${balance}"
+
+menu.title: "&eA&fH &7- &fPage: &e{current_page}"
+menu.confirmTitle: "&aConfirm Menu"
+menu.yourItemsTitle: "&eYour &fItems &7- &fPage: &e{current_page}"
+
+player.noItemInHand: "&cYou must have an item in your hand to sell it"
+player.insufficientFunds: "&cYou don't have enough funds to buy this item"
+player.sellPopup: "&fPlayer &e{player} &fjust listed &e{item} &fon &e/ah"
+player.buySuccess: "&aYou successfully bought &e{item} &afor &e${price}"
+player.sellNotification: "&fPlayer &e{player} &fbought your &e{item} &ffor &e${price}"
+player.inventoryFull: "&cYour inventory is full to buy this item"
+player.maxItems: "&cYou have reached the item limit ({max_items})"
+
+command.help: "&b/ah help"
+command.noPlayer: "&cYou must be a player to use this command"
+command.noPermission: "&cYou don't have permission to use this command"
+
+command.sell.success: "&fYou just put &e{item} &fon sale for &e${price}"
+command.sell.minPriceError: "&cThe price must be greater than or equal to ${price}"
+command.sell.maxPriceError: "&cThe price must be less than or equal to ${price}"
+
+command.setlanguage.error: "&cThat language is not allowed. Use: en-US, es-ES, fr-FR, pr-BR, ru-RU, de-DE"
+command.setlanguage.success: "&aLanguage has been successfully changed"

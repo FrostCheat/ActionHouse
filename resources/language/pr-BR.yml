@@ -1,0 +1,43 @@
+prefix: "&bCasaDeLeilões &7- &r"
+
+item.lore:
+  - "&7▴ &fVENDEDOR&8: &b{seller}"
+  - "&7✯ &fPREÇO&8: &c{price}$"
+  - "&7⏺ &fEXPIRA&8: &e{expiry_time}"
+  - ""
+  - "&9&o- CLIQUE PARA COMPRAR ESTE ITEM"
+
+npc.name: "&l&aNOVO!\n&r&l&4Casa de Leilões\n&7/ah"
+npc.scoreTag: "&8Clique para abrir"
+npc.spawn: "&aVocê gerou o NPC com sucesso, para removê-lo bata com um bloco de bedrock"
+
+menu.item.yourItems: "&aSeus Itens"
+menu.item.previousPage: "&cPágina Anterior"
+menu.item.nextPage: "&aPróxima Página"
+menu.item.back: "&cVoltar"
+menu.item.confirmBuy: "&aConfirmar Compra"
+menu.item.cancelBuy: "&cCancelar Compra"
+menu.item.balance: "&fSaldo: &e${balance}"
+
+menu.title: "&eA&fH &7- &fPágina: &e{current_page}"
+menu.confirmTitle: "&aMenu de Confirmação"
+menu.yourItemsTitle: "&eSeus &fItens &7- &fPágina: &e{current_page}"
+
+player.noItemInHand: "&cVocê precisa ter um item na mão para vendê-lo"
+player.insufficientFunds: "&cVocê não tem fundos suficientes para comprar este item"
+player.sellPopup: "&fO jogador &e{player} &facabou de listar &e{item} &fno &e/ah"
+player.buySuccess: "&aVocê comprou &e{item} &acom sucesso por &e${price}"
+player.sellNotification: "&fO jogador &e{player} &fcomprou seu &e{item} &fpor &e${price}"
+player.inventoryFull: "&cSeu inventário está cheio para comprar este item"
+player.maxItems: "&cVocê atingiu o limite de itens ({max_items})"
+
+command.help: "&b/ah ajuda"
+command.noPlayer: "&cVocê deve ser um jogador para usar este comando"
+command.noPermission: "&cVocê não tem permissão para usar este comando"
+
+command.sell.success: "&fVocê acabou de colocar &e{item} &fà venda por &e${price}"
+command.sell.minPriceError: "&cO preço deve ser maior ou igual a ${price}"
+command.sell.maxPriceError: "&cO preço deve ser menor ou igual a ${price}"
+
+command.setlanguage.error: "&cEsse idioma não é permitido. Use: en-US, es-ES, fr-FR, pr-BR, ru-RU, de-DE"
+command.setlanguage.success: "&aIdioma alterado com sucesso"

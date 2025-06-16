@@ -1,0 +1,24 @@
+# Do not touch this setting, it may delete all your current settings.
+config-version: 1
+
+# Available languages: en-US, es-ES, fr-FR, pr-BR, ru-RU, de-DE
+language: en-US
+
+# for 64 bits SERVER = 9223372036854775807
+# for 32 bits SERVER = 2147483647
+max-price: 1000000000
+min-price: 1
+
+# Maximum number of items for all users
+default-items: 5
+# This is the number of items per group that a user can place in the /ah
+# To give that amount to a user you must give the user or their rank permission
+# Example: actionhouse.group.vip
+# To give you the maximum number of items from that group to place in /ah
+# -1 for unlimited items in /ah
+groups:
+  user: 5
+  vip: 10
+  mega: 15
+  plus: 20
+  owner: -1

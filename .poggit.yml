@@ -1,0 +1,22 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/FrostCheatMC/ActionHouse
+build-by-default: true
+branches:
+  - main
+projects:
+  ActionHouse:
+    path: ""
+    icon: "icon.png"
+    libs:
+      - src: LatamPMDevs/Commando/Commando
+        version: ^3.1.1
+        branch: pm5
+      - src: LatamPMDevs/ConfigUpdater/ConfigUpdater
+        version: ^2.0.1
+        branch: master
+      - src: LatamPMDevs/UpdateNotifier/UpdateNotifier
+        version: ^3.0.0
+      - src: muqsit/InvMenu/InvMenu
+        branch: "pm5"
+        version: ^4.6
+    lint: false
+...
