@@ -19,18 +19,18 @@
 
 ## ✨ Features
 
-- ✅ Fully customizable messages via `language` files  
-- 💸 Economy support with **BedrockEconomy**  
-- 🧪 Compatible with latest **PocketMine-MP API**  
-- 🌍 Multi-language system (es-ES, en-US, fr-FR, etc.)  
-- 📦 Support for **ShulkerBox item content viewer**  
-- 💰 Min & Max price configuration per item  
-- 🎯 Limit max items per player  
-- ⏱️ Configurable item expiration/duration  
-- ⚡ Optimized for performance — no lag, even with large data  
-- 📚 Paginated inventory menus  
-- ✅ Confirm Buy system  
-- 👤 NPC support to open `/ah` menu  
+- ✅ Fully customizable messages via `language` files
+- 💸 Economy support with **BedrockEconomy**
+- 🧪 Compatible with latest **PocketMine-MP API**
+- 🌍 Multi-language system (es-ES, en-US, fr-FR, etc.)
+- 📦 Support for **ShulkerBox item content viewer**
+- 💰 Min & Max price configuration per item
+- 🎯 Limit max items per player
+- ⏱️ Configurable item expiration/duration
+- ⚡ Optimized for performance — no lag, even with large data
+- 📚 Paginated inventory menus
+- ✅ Confirm Buy system
+- 👤 NPC support to open `/ah` menu
 - 🔒 Permission-based control
 
 ---
@@ -44,10 +44,10 @@
 
 ## 📥 Installation
 
-1. 📦 [Download ActionHouse](https://poggit.pmmp.io/p/ActionHouse) from Poggit  
-2. 💰 [Download BedrockEconomy](https://poggit.pmmp.io/p/BedrockEconomy/)  
-3. 📁 Place both `.phar` files inside your `/plugins/` directory  
-4. 🔁 Restart your server  
+1. 📦 [Download ActionHouse](https://poggit.pmmp.io/p/ActionHouse) from Poggit
+2. 💰 [Download BedrockEconomy](https://poggit.pmmp.io/p/BedrockEconomy/)
+3. 📁 Place both `.phar` files inside your `/plugins/` directory
+4. 🔁 Restart your server
 5. ✅ Ready to go! Use `/ah` to open the auction menu
 
 ---
@@ -69,7 +69,7 @@ Once installed, the plugin generates the following files:
 
 - `config.yml` – General configuration (max items, min/max prices, etc.)
 - `items.yml` – Auctioned item data (auto-managed)
-- `/lang/` – Translatable strings (`en-US.yml`, `es-ES.yml`, etc.)
+- `/language/` – Translatable strings (`en-US.yml`, `es-ES.yml`, etc.)
 
 You can edit `lang` files to fully customize messages and colors.
 
@@ -114,7 +114,7 @@ Feel free to contribute more in `/language/`.
 
 * Uses [InvMenu](https://github.com/Muqsit/InvMenu) for inventory GUIs
 * All data is serialized/deserialized and saved using optimized logic
-* Supports **ShulkerBox viewing** directly from inventory
+* Supports **ShulkerBox viewing** directly from confirm menu inventory
 * Saves data **asynchronously** to avoid lag on high-load servers
 
 ---

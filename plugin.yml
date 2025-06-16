@@ -1,7 +1,7 @@
 name: ActionHouse
 author: FrostCheat
 main: frostcheat\actionhouse\Loader
-version: 1.0
+version: 1.0.0-RELEASE
 api: 5.3.0
 
 depend:
