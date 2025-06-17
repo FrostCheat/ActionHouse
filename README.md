@@ -4,6 +4,9 @@
   <a href="https://paypal.me/FrostCheatMC?country.x=CO&locale.x=es_XC">
     <img src="https://img.shields.io/badge/donate-paypal-ff69b4?style=for-the-badge&logo=paypal">
   </a>
+  <a href="[https://discord.gg/frostcheat](https://discord.gg/k8X7CG2kFv)">  
+    <img src="https://img.shields.io/discord/365202594932719616.svg?style=for-the-badge&color=7289da&logo=discord&logoColor=white&logoWidth=12">  
+  </a>
   <a href="https://poggit.pmmp.io/ci/FrostCheatMC/ActionHouse/ActionHouse">
     <img src="https://poggit.pmmp.io/ci.shield/FrostCheatMC/ActionHouse/ActionHouse?style=for-the-badge">
   </a>
