@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/donate-paypal-ff69b4?style=for-the-badge&logo=paypal">
   </a>
   <a href="https://discord.gg/k8X7CG2kFv">
-    <img src="https://img.shields.io/discord/365202594932719616.svg?style=for-the-badge&color=7289da&logo=discord&logoColor=white&logoWidth=12">  
+    <img src="https://img.shields.io/discord/1384337463971020911?style=for-the-badge&logo=discord&logoColor=white&logoSize=12&color=blue">  
   </a>
   <a href="https://poggit.pmmp.io/ci/FrostCheatMC/ActionHouse/ActionHouse">
     <img src="https://poggit.pmmp.io/ci.shield/FrostCheatMC/ActionHouse/ActionHouse?style=for-the-badge">
