@@ -7,8 +7,8 @@
   <a href="https://discord.gg/k8X7CG2kFv">
     <img src="https://img.shields.io/discord/1384337463971020911?style=for-the-badge&logo=discord&logoColor=white&logoSize=12&color=blue">  
   </a>
-  <a href="https://poggit.pmmp.io/ci/FrostCheatMC/ActionHouse/ActionHouse">
-    <img src="https://poggit.pmmp.io/ci.shield/FrostCheatMC/ActionHouse/ActionHouse?style=for-the-badge">
+  <a href="https://poggit.pmmp.io/ci/FrostCheat/ActionHouse/ActionHouse">
+    <img src="https://poggit.pmmp.io/ci.shield/FrostCheat/ActionHouse/ActionHouse?style=for-the-badge">
   </a>
   <a href="https://poggit.pmmp.io/p/ActionHouse">
     <img src="https://poggit.pmmp.io/shield.downloads/ActionHouse?style=for-the-badge">
